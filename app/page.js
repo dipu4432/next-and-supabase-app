@@ -1,7 +1,7 @@
-function Card(props) {
+function Card({ text = "Nothing to say" }) {
   return (
     <div className="border rounded-md border-gray-600 p-4">
-      Card component: {props.text}
+      Card component: {text}
     </div>
   )
 }
