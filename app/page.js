@@ -7,7 +7,7 @@ function Card({ children }) {
 }
 
 export default function Home() {
-  const name = "Dipu";
+  const name = "Singh";
 
   return (
     <>
