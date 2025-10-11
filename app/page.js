@@ -1,3 +1,5 @@
+'use client'
+
 function Card({ children }) {
   return (
     <div className="border rounded-md border-gray-600 p-4">
@@ -21,6 +23,8 @@ export default function Home() {
         <Card />
         <Card />
         <Card />
+
+        <button onClick={() => alert("Hello!")}>Click me!</button>
       </div>
     </>
   );
