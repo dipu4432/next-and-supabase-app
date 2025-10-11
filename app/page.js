@@ -10,6 +10,11 @@ function Card({ children }) {
 
 export default function Home() {
   const name = "Singh";
+  const handleClick = () => alert('Hello!')
+  const handleDoubleClick = (e) => {
+    console.log(e);
+    alert('Hello!')
+  }
 
   return (
     <>
@@ -24,7 +29,8 @@ export default function Home() {
         <Card />
         <Card />
 
-        <button onClick={() => alert("Hello!")}>Click me!</button>
+        <button onClick={ handleClick }>Click me!</button>
+        <button onClick={ handleDoubleClick }>Double Click me!</button>
       </div>
     </>
   );
