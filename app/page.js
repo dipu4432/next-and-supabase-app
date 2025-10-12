@@ -29,8 +29,10 @@ export default function Home() {
         <Card />
         <Card />
 
-        <button onClick={ handleClick }>Click me!</button>
-        <button onClick={ handleDoubleClick }>Double Click me!</button>
+        <div className="flex flex-col gap-4 items-start">
+          <button onClick={ handleClick }>Click me!</button>
+          <button onClick={ handleDoubleClick }>Double Click me!</button>
+        </div>
       </div>
     </>
   );
