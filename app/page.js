@@ -11,27 +11,30 @@ function Card({ children }) {
 }
 
 export default function Home() {
-  const [ label, setLabel ] = useState('show')
+  const [ isVisible, setIsVisible ] = useState(true)
   const name = "Singh";
 
   const handleClick = (e) => {
-    setLabel(label == 'show' ? 'hide' : 'show')
+    setIsVisible(!isVisible)
   }
 
   return (
     <>
       <div className="p-20 space-y-4">
         <div>Hello, {name}</div>
-        <Card>This is being passed from the parent</Card>
+        
+        {isVisible && <><Card>This is being passed from the parent</Card>
         <Card>
           <div>This is JS!</div>
           <Card>Nested text!</Card>
         </Card>
         <Card />
         <Card />
-        <Card />
+        <Card /></>}
 
-        <button onClick={ handleClick }>{label}</button>
+        <button onClick={ handleClick }>
+          {isVisible ? 'Hide' : 'Show'}
+        </button>
       </div>
     </>
   );
