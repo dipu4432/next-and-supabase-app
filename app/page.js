@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from 'react'
+
 function Card({ children }) {
   return (
     <div className="border rounded-md border-gray-600 p-4">
@@ -9,14 +11,11 @@ function Card({ children }) {
 }
 
 export default function Home() {
+  const [ label, setLabel ] = useState('show')
   const name = "Singh";
-  let lebel = "show";
-  console.log('render');
-  
-  const handleClick = () => alert('Hello!')
-  const handleDoubleClick = (e) => {
-    console.log('event');
-    lebel = "hide";
+
+  const handleClick = (e) => {
+    setLabel(label == 'show' ? 'hide' : 'show')
   }
 
   return (
@@ -32,10 +31,7 @@ export default function Home() {
         <Card />
         <Card />
 
-        <div className="flex flex-col gap-4 items-start">
-          <button onClick={ handleClick }>Click me!</button>
-          <button onClick={ handleDoubleClick }>{lebel}</button>
-        </div>
+        <button onClick={ handleClick }>{label}</button>
       </div>
     </>
   );
