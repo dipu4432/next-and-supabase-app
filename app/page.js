@@ -10,10 +10,13 @@ function Card({ children }) {
 
 export default function Home() {
   const name = "Singh";
+  let lebel = "show";
+  console.log('render');
+  
   const handleClick = () => alert('Hello!')
   const handleDoubleClick = (e) => {
-    console.log(e);
-    alert('Hello!')
+    console.log('event');
+    lebel = "hide";
   }
 
   return (
@@ -31,7 +34,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-4 items-start">
           <button onClick={ handleClick }>Click me!</button>
-          <button onClick={ handleDoubleClick }>Double Click me!</button>
+          <button onClick={ handleDoubleClick }>{lebel}</button>
         </div>
       </div>
     </>
