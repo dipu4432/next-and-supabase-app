@@ -12,7 +12,7 @@ function Card({ children }) {
 
 export default function Home() {
   const [ isVisible, setIsVisible ] = useState(true)
-  const name = "Dipu Singh";
+  const name = "Dipu";
 
   const handleClick = (e) => {
     setIsVisible(!isVisible)
