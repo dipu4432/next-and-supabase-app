@@ -12,20 +12,20 @@ function Card({ children }) {
 
 export default function Home() {
   const [ isVisible, setIsVisible ] = useState(true)
+  const [ names, setNames ] = useState(['Suraj', 'Manish', 'Ranjeet'])
+
   const name = "Dipu Kumar";
 
   const handleClick = (e) => {
     setIsVisible(!isVisible)
   }
 
-  const cards = isVisible && <><Card>This is being passed from the parent</Card>
-        <Card>
-          <div>This is JS!</div>
-          <Card>Nested text!</Card>
-        </Card>
-        <Card />
-        <Card />
-        <Card /></>
+  const handleAdd = () => {
+    setNames([...names, `New element!`])
+  }
+
+  const cards = isVisible 
+    && names.map((name, index) => <Card key={index}>{name}</Card>)
 
   return (
     <>
@@ -34,9 +34,12 @@ export default function Home() {
         
         {cards}
 
-        <button onClick={ handleClick }>
-          {isVisible ? 'Hide' : 'Show'}
-        </button>
+        <div className="flex space-x-4">
+          <button onClick={ handleClick }>
+            {isVisible ? 'Hide' : 'Show'}
+          </button>
+          <button onClick={handleAdd}>Add</button>
+        </div>
       </div>
     </>
   );
