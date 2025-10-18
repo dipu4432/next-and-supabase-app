@@ -22,7 +22,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <header className="p-20 border border-blue-800">
+          I'm be visible everywhere!
+        </header>
+        <main>
+          {children}
+        </main>
+        <footer></footer>
       </body>
     </html>
   );
