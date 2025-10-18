@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Card from "@/components/card"
+// import AboutPage from '@/about/page'
 
 export default function Home() {
   const [ isVisible, setIsVisible ] = useState(true)
@@ -26,6 +27,7 @@ export default function Home() {
         <div>Hello, {name}</div>
         
         {cards}
+        {/* {AboutPage} */}
 
         <div className="flex space-x-4">
           <button onClick={ handleClick }>
