@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className="p-20 border border-blue-800">
-          I'm be visible everywhere!
+          It is Sunday and today is holiday!
         </header>
         <main>
           {children}
