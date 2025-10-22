@@ -1,6 +1,6 @@
 const ProjectsPage = () => {
   return (
-    <div>Projects!</div>
+    <div>Projects! This won&apos;t be visible.</div>
   )
 }
 
