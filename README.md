@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+This is a Next and Supabase Blog App where there are multiple topics are available like Economics, crypto, trade, finance and entrepreneurship.
+
+Here Next is used for frontend and supabase is used for backend.
+
 ## Getting Started
 
 First, run the development server:
