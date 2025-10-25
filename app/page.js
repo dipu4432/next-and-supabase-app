@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="p-20 space-y-4">
+      <div className="space-y-4">
         <div>Hello, {name}</div>
         
         {cards}
