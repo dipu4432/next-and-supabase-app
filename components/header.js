@@ -1,15 +1,9 @@
-import Counter from "@/components/counter";
-import Link from 'next/link';
+import Navigation from "@/components/navigation";
 
 const Header = () => {
   return (
     <header>
-        <ul className="flex space-x-4">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/about/projects">Projects</Link></li>
-        </ul>
-        <Counter />
+        <Navigation />
     </header>
   )
 }
