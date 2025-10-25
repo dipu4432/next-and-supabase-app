@@ -1,7 +1,7 @@
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 const ProjectsPage = async () => {
-  const response = await fetch('http://localhost:3001/repos', { next: { revalidate: 3600 } })
+  const response = await fetch('http://localhost:3001/repos', { cache: 'no-store'})
   const repos = await response.json()
 
   return (
