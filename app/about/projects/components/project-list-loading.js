@@ -1,8 +1,5 @@
-const Loading = () => {
+const ProjectListLoading = () => {
   return (
-    <div className="p-20">
-      <h1 className="mb-8 text-xl">Projects</h1>
-
       <ul className="space-y-8">
         {Array(3).fill(0).map((_el, index) => (
           <li key={index}>
@@ -10,8 +7,7 @@ const Loading = () => {
           </li>
         ))}
       </ul>
-    </div>
   )
 }
 
-export default Loading
+export default ProjectListLoading
